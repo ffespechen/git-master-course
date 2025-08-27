@@ -1,12 +1,15 @@
-// Utiliza el módulo Math para generar un número aleatorio entre 1 y max
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max) + 1;
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
 // Comentando función
 function generateRandom() {
+  let min = document.getElementById('min').value;
   let max = document.getElementById('max').value;
   let res = document.getElementById('result');
-  res.textContent = 'Result: ' + getRandomInt(max);
+  res.textContent = 'Result: ' + getRandomIntInclusive(min, max);
 }
 // Otro comentario
 let button = document.querySelector('button');
