@@ -1,3 +1,4 @@
+// Utiliza el módulo Math para generar un número aleatorio entre 1 y max
 function getRandomInt(max) {
   return Math.floor(Math.random() * max) + 1;
 }
